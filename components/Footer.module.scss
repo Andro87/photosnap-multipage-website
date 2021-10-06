@@ -1,0 +1,118 @@
+@import "../styles/variables.scss";
+
+.footer {
+    width: 100%;
+    background-color: var(--PureBlack);
+    padding: 56px 33px;
+    @media screen and (min-width: $tablet) {
+        padding: 64px 40px;
+    }
+}
+
+.footer_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media screen and (min-width: $tablet) {
+        flex-direction: row;
+        align-items: initial;
+        justify-content: space-between;
+    }
+    @media screen and (min-width: $desktop) {
+        width: 77%;
+        margin: auto;
+    }
+}
+.contact_wrap {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    @media screen and (min-width: $desktop) {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 37%;
+    }
+    svg {
+        path {
+            fill: var(--PureWhite);
+        }
+    }
+}
+.social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 155px;
+    margin: auto;
+    margin-top: 32px;
+    @media screen and (min-width: $tablet) {
+        order: 3;
+        margin: initial;
+    }
+    @media screen and (min-width: $desktop) {
+        position: absolute;
+        bottom: 0;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+}
+.link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 120px;
+    @media screen and (min-width: $tablet) {
+        flex-direction: row;
+        margin-top: 32px;
+        margin-bottom: 72px;
+        order: 2;
+    }
+    @media screen and (min-width: $desktop) {
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    a {
+        text-decoration: none;
+        font-family: "dm";
+        font-weight: 700;
+        font-size: 0.8rem;
+        color: var(--PureWhite);
+        margin-bottom: 20px;
+        @media screen and (min-width: $tablet) {
+            margin-right: 26px;
+            margin-bottom: 0;
+        }
+        @media screen and (min-width: $desktop) {
+            margin-right: initial;
+        }
+        &:hover {
+            opacity: 0.3;
+            cursor: pointer;
+        }
+    }
+}
+.wrapper {
+    text-align: center;
+    p {
+        color: var(--PureWhite);
+        opacity: 0.5;
+        margin-top: 34px;
+
+        @media screen and (min-width: $tablet) {
+            margin-top: initial;
+        }
+        @media screen and (min-width: $desktop) {
+            margin-top: 86px;
+        }
+    }
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}

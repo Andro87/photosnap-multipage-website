@@ -1,0 +1,80 @@
+@import "./variables";
+
+.main_container {
+    width: 100%;
+}
+
+.main {
+    @media screen and(min-width:$tablet) {
+        display: flex;
+        background-image: url("../public/assets/stories/tablet/moon-of-appalacia.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    @media screen and(min-width:$desktop) {
+        background-image: url("../public/assets/stories/desktop/moon-of-appalacia.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+.main_img {
+    display: flex;
+
+    img {
+        width: 100%;
+    }
+    @media screen and(min-width:$tablet) {
+        display: none;
+    }
+}
+
+.main_info {
+    padding: 48px 28px;
+    background-color: var(--PureBlack);
+    color: var(--PureWhite);
+    @media screen and(min-width:$tablet) {
+        padding: 0;
+        width: 387px;
+        margin: 122px 39px;
+        background-color: transparent;
+    }
+
+    @media screen and(min-width:$desktop) {
+        margin: 122px 112px;
+    }
+
+    h1 {
+        margin-top: 16px;
+        margin-bottom: 16px;
+
+        @media screen and(min-width:$tablet) {
+            margin-top: 24px;
+        }
+    }
+    p {
+        color: var(--PureWhite);
+    }
+    span {
+        opacity: 0.6;
+    }
+}
+.paragraph {
+    opacity: 0.6;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+.size {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+.section_pictures {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    @media screen and(min-width:$tablet) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and(min-width:$desktop) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

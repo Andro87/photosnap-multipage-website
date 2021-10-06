@@ -1,0 +1,54 @@
+@import "../styles/variables.scss";
+.btn_wrap {
+    display: flex;
+    &:hover {
+        cursor: pointer;
+    }
+}
+.footer_position {
+    justify-content: center;
+    @media screen and (min-width: $tablet) {
+        justify-content: flex-end;
+    }
+}
+.btn {
+    font-family: "dm";
+    font-weight: 700;
+    font-size: 0.8rem;
+    background-color: transparent;
+    letter-spacing: 2px;
+    border: none;
+    border-bottom: 1px solid transparent;
+}
+.white {
+    color: var(--PureWhite);
+    &:hover {
+        border-bottom: 1px solid var(--PureWhite);
+    }
+}
+.black {
+    color: var(--PureBlack);
+    &:hover {
+        border-bottom: 1px solid var(--PureBlack);
+    }
+}
+.main {
+    margin-left: 18px;
+}
+.detail {
+    margin-left: 26px;
+}
+.story {
+    margin-left: auto;
+}
+.footer {
+    margin-left: 22px;
+    @media screen and (min-width: $tablet) {
+        margin-left: 16px;
+    }
+}
+.white_arrow {
+    g {
+        stroke: var(--PureWhite); /*rivedere perche npn va il biamco*/
+    }
+}

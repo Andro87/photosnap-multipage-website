@@ -1,0 +1,35 @@
+@import "../styles/variables.scss";
+
+.info_header {
+    margin-bottom: 24px;
+    padding-right: 46px;
+    @media screen and (min-width: $tablet) {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        align-items: center;
+        padding: 24px 23px 24px;
+        margin-bottom: 0;
+    }
+    p {
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+}
+.header_mobile {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    @media screen and (min-width: $tablet) {
+        display: none;
+    }
+}
+.check__wrap {
+    display: flex;
+    justify-content: space-between;
+}
+.check__wrap .check {
+    width: 18px;
+    height: 15px;
+    margin: 0 20px;
+}

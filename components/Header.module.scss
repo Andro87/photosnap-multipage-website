@@ -1,0 +1,121 @@
+@import "../styles/variables.scss";
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 28px 33px 28px 24px;
+    @media screen and(min-width:$tablet) {
+        padding: 18px 40px;
+    }
+    @media screen and(min-width:$desktop) {
+        padding: 16px 0;
+        width: 77%;
+        margin: auto;
+    }
+}
+.btn_mobile {
+    background-color: transparent;
+    border: none;
+    @media screen and(min-width:$tablet) {
+        display: none;
+    }
+}
+.navigation {
+    display: none;
+    @media screen and(min-width:$tablet) {
+        display: flex;
+        align-items: center;
+    }
+    @media screen and(min-width:$desktop) {
+        width: 65%;
+        justify-content: space-between;
+    }
+    a {
+        &:hover {
+            opacity: 0.3;
+            cursor: pointer;
+        }
+        @media screen and(min-width:$tablet) {
+            text-decoration: none;
+            font-family: "dm";
+            font-weight: 700;
+            font-size: 0.8rem;
+            color: var(--PureBlack);
+            margin-left: 37px;
+        }
+        @media screen and(min-width:$desktop) {
+            margin-right: 37px;
+            margin-left: initial;
+        }
+    }
+}
+
+.navigation_mobile {
+    background-color: var(--PureWhite);
+    width: 100%;
+    padding: 32px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    a {
+        text-decoration: none;
+        font-family: "dm";
+        font-weight: 700;
+        font-size: 1rem;
+        color: var(--PureBlack);
+        margin-bottom: 20px;
+        &:hover {
+            opacity: 0.3;
+            cursor: pointer;
+        }
+    }
+}
+.link_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and(min-width:$tablet) {
+        flex-direction: row;
+    }
+}
+.break_line {
+    border: none;
+    height: 1px;
+    width: 100%;
+    background-color: var(--PureBlack);
+    opacity: 0.25;
+    @media screen and(min-width:$tablet) {
+        display: none;
+    }
+}
+.btn {
+    border: none;
+    font-family: "dm";
+    font-weight: 700;
+    font-size: 1rem;
+    background-color: var(--PureBlack);
+    color: var(--PureWhite);
+    margin-top: 20px;
+    padding: 14px;
+    width: 100%;
+
+    @media screen and(min-width:$tablet) {
+        font-size: 0.8rem;
+        padding: 12px 24px;
+        margin-top: 0;
+        margin-left: 50px;
+        max-width: 158px;
+    }
+    &:hover {
+        background-color: var(--LightGrey);
+        color: var(--PureBlack);
+        cursor: pointer;
+        transition: all 0.4s ease-in-out;
+    }
+}

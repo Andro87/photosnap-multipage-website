@@ -1,0 +1,121 @@
+@import "./variables";
+
+.main_container {
+    width: 100%;
+}
+
+.main {
+    width: 100%;
+
+    @media screen and(min-width:$tablet) {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+}
+.main_img {
+    display: flex;
+    @media screen and(min-width:$tablet) {
+        width: 35%;
+    }
+    @media screen and(min-width:$tablet) {
+        width: 58%;
+    }
+    img {
+        width: 100%;
+    }
+}
+.main_info {
+    background-color: var(--PureBlack);
+    padding: 72px 24px 72px 33px;
+
+    @media screen and(min-width:$tablet) {
+        display: flex;
+        padding: 173px 0;
+        align-items: center;
+        width: 65%;
+    }
+    @media screen and(min-width:$desktop) {
+        width: 42%;
+    }
+}
+
+.info_wrap {
+    position: relative;
+    width: 100%;
+    @media screen and (min-width: $tablet) {
+        padding-left: 54px;
+        width: 387px;
+    }
+    @media screen and (min-width: $desktop) {
+        padding-left: 112px;
+        width: 500px;
+    }
+    h1 {
+        color: var(--PureWhite);
+    }
+    p {
+        margin-top: 16px;
+        margin-bottom: 23px;
+        color: var(--PureWhite);
+        opacity: 0.6;
+        @media screen and (min-width: $tablet) {
+            margin-top: 21px;
+            margin-bottom: 48px;
+        }
+    }
+
+    &::before {
+        content: "";
+        background: var(--MainAccent);
+        position: absolute;
+        height: 6px;
+        width: 128px;
+        top: -74px; /**/
+        left: 0;
+
+        @media screen and (min-width: $tablet) {
+            height: 100%;
+            width: 6px;
+            top: 0;
+            left: 0;
+        }
+    }
+}
+.section_details {
+    width: 100%;
+}
+.section_pictures {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    @media screen and (min-width: $tablet) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (min-width: $desktop) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+.section_tools {
+    width: 100%;
+    padding: 80px 33px;
+    display: flex;
+    justify-content: center;
+    @media screen and (min-width: $tablet) {
+        padding: 120px 0;
+    }
+}
+.tools_container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 56px;
+    justify-items: center;
+    @media screen and (min-width: $tablet) {
+        row-gap: 80px;
+    }
+    @media screen and (min-width: $desktop) {
+        width: 77%;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 0;
+        column-gap: 30px; /***/
+    }
+}

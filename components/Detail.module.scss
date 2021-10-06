@@ -1,0 +1,54 @@
+@import "../styles/variables.scss";
+.detail {
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: $tablet) {
+        flex-direction: row;
+    }
+}
+.order {
+    @media screen and (min-width: $tablet) {
+        flex-direction: row-reverse;
+    }
+}
+.detail_img {
+    @media screen and (min-width: $tablet) {
+        width: 35%;
+    }
+    @media screen and (min-width: $desktop) {
+        width: 58%;
+    }
+    picture {
+        display: flex;
+        img {
+            width: 100%;
+        }
+    }
+}
+.detail_info {
+    padding: 72px 24px 72px 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media screen and (min-width: $tablet) {
+        width: 65%;
+        padding: 0;
+        padding: 0 54px;
+    }
+    @media screen and (min-width: $desktop) {
+        width: 42%;
+    }
+}
+.info_wrap {
+    @media screen and (min-width: $tablet) {
+        max-width: 387px;
+    }
+    p {
+        margin-top: 16px;
+        margin-bottom: 23px;
+        @media screen and (min-width: $tablet) {
+            margin-top: 21px;
+            margin-bottom: 48px;
+        }
+    }
+}

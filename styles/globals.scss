@@ -1,0 +1,74 @@
+@import "./variables.scss";
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: "dm";
+    src: url("../public/fonts/DMSans-Bold.ttf");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "dm";
+    src: url("../public/fonts/DMSans-Regular.ttf");
+    font-weight: 400;
+}
+:root {
+    --PureBlack: hsla(0, 0%, 0%, 1);
+    --LightGrey: hsla(0, 0%, 87%, 1);
+    --PureWhite: hsla(0, 0%, 100%, 1);
+    --MainAccent: linear-gradient(
+        26.57deg,
+        #ffc593 0.42%,
+        #bc7198 43.46%,
+        #5a77ff 83.33%
+    );
+}
+html {
+    font-size: 15px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "dm";
+    font-weight: 700;
+}
+h1 {
+    font-size: 2.13rem;
+    line-height: 2.67rem;
+    letter-spacing: 3.33px;
+    @media screen and(min-width:$tablet) {
+        font-size: 2.67rem;
+        line-height: 3.2rem;
+        letter-spacing: 4.17px;
+    }
+}
+h2 {
+    font-size: 2.13rem;
+    line-height: 2.67rem;
+    letter-spacing: 3.33px;
+    @media screen and(min-width:$tablet) {
+        font-size: 2.67rem;
+        line-height: 3.2rem;
+        letter-spacing: 4.17px;
+    }
+}
+h3 {
+    font-size: 1.2rem;
+    line-height: 1.67rem;
+}
+h4 {
+    font-size: 0.8rem;
+}
+p {
+    color: var(--PureBlack);
+    font-family: "dm";
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.67rem;
+}
