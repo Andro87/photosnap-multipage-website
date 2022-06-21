@@ -9,8 +9,11 @@ const Header: React.FunctionComponent = () => {
     const [open, setOpen] = useState(false);
     return (
         <header className={styles.header}>
-            <Logo />
-
+            <Link href="/">
+                <a>
+                    <Logo />
+                </a>
+            </Link>
             <button
                 type="button"
                 aria-label="menu mobile"

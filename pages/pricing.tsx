@@ -24,7 +24,9 @@ export default function Pricing() {
                 />
                 <link rel="icon" href="/assets/favicon-32x32.png" />
             </Head>
+
             <Header />
+
             <main className={styles.main}>
                 <picture className={styles.main_img}>
                     <source

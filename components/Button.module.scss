@@ -20,6 +20,7 @@
     letter-spacing: 2px;
     border: none;
     border-bottom: 1px solid transparent;
+    transition: all ease-in 0.3s;
     &:hover {
         cursor: pointer;
     }
