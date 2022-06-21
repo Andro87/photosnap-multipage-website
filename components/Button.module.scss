@@ -1,6 +1,7 @@
 @import "../styles/variables.scss";
 .btn_wrap {
     display: flex;
+
     &:hover {
         cursor: pointer;
     }
@@ -19,6 +20,9 @@
     letter-spacing: 2px;
     border: none;
     border-bottom: 1px solid transparent;
+    &:hover {
+        cursor: pointer;
+    }
 }
 .white {
     color: var(--PureWhite);

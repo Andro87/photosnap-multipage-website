@@ -33,6 +33,7 @@
         justify-content: space-between;
     }
     a {
+        transition: all 0.3s ease-in;
         &:hover {
             opacity: 0.3;
             cursor: pointer;
