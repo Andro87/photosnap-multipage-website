@@ -2,17 +2,25 @@ import styles from "./Picture.module.scss";
 import React, { ReactNode } from "react";
 import Button from "../components/Button";
 interface Props {
-    readonly picture: ReactNode;
+    readonly desktop: string;
+    readonly mobile: string;
     readonly date?: string;
     readonly header: string;
     readonly author: string;
 }
 
 const Picture: React.FunctionComponent<Props> = props => {
-    const { picture, date, header, author } = props;
+    const { desktop, mobile, date, header, author } = props;
+    const desktopSize = 1180;
     return (
         <div className={styles.picture_container}>
-            {picture}
+            <picture>
+                <source
+                    srcSet={desktop}
+                    media={`(min-width:${desktopSize}px)`}
+                />
+                <img src={mobile} alt="" />
+            </picture>
 
             <div className={styles.picture_info}>
                 <p>{date}</p>

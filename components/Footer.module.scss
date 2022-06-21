@@ -73,6 +73,7 @@
     @media screen and (min-width: $desktop) {
         flex-direction: column;
         justify-content: space-between;
+        align-items: flex-start;
         margin-top: 0;
         margin-bottom: 0;
     }
@@ -83,6 +84,7 @@
         font-size: 0.8rem;
         color: var(--PureWhite);
         margin-bottom: 20px;
+        transition: all 0.3s ease-in;
         @media screen and (min-width: $tablet) {
             margin-right: 26px;
             margin-bottom: 0;

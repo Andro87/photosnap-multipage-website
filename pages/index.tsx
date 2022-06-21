@@ -1,17 +1,20 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.scss";
-import Responsive from "../svg/responsive.svg";
-import Unlimit from "../svg/no-limit.svg";
-import Embed from "../svg/embed.svg";
+
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Button from "../components/Button";
 import Detail from "../components/Detail";
 import Picture from "../components/Picture";
 import Tool from "../components/Tool";
+
+import { detail } from "../data/detail";
+import { pictures } from "../data/pictureIndex";
+import { tool } from "../data/toolsIndex";
 export default function Home() {
     const desktop = 1180;
     const tablet = 720;
+
     return (
         <div className={styles.main_container}>
             <Head>
@@ -22,6 +25,7 @@ export default function Home() {
                 />
                 <link rel="icon" href="/assets/favicon-32x32.png" />
             </Head>
+
             <Header />
 
             <main className={styles.main}>
@@ -57,157 +61,40 @@ export default function Home() {
                 </div>
             </main>
             <section className={styles.section_details} aria-label="details">
-                <Detail
-                    picture={
-                        <picture>
-                            <source
-                                srcSet="/assets/home/desktop/beautiful-stories.jpg"
-                                media={`(min-width:${desktop}px)`}
-                            />
-                            <source
-                                srcSet="/assets/home/tablet/beautiful-stories.jpg"
-                                media={`(min-width:${tablet}px)`}
-                            />
-                            <img
-                                src="/assets/home/mobile/beautiful-stories.jpg"
-                                alt=""
-                            />
-                        </picture>
-                    }
-                    header="
-                    BEAUTIFUL STORIES EVERY TIME"
-                    paragraph="
-                            We provide design templates to ensure your stories
-                            look terrific. Easily add photos, text, embed maps
-                            and media from other networks. Then share your story
-                            with everyone."
-                    button={
-                        <Button
-                            title="VIEW THE STORIES"
-                            color="black"
-                            space="detail"
-                        />
-                    }
-                />
-                <Detail
-                    picture={
-                        <picture>
-                            <source
-                                srcSet="/assets/home/desktop/designed-for-everyone.jpg"
-                                media={`(min-width:${desktop}px)`}
-                            />
-                            <source
-                                srcSet="/assets/home/tablet/designed-for-everyone.jpg"
-                                media={`(min-width:${tablet}px)`}
-                            />
-                            <img
-                                src="/assets/home/mobile/designed-for-everyone.jpg"
-                                alt=""
-                            />
-                        </picture>
-                    }
-                    header="
-                DESIGNED FOR EVERYONE"
-                    paragraph="
-                Photosnap can help you create stories that resonate with your audience.  Our 
-                tool is designed for photographers of all levels, brands, businesses you name it. "
-                    button={
-                        <Button
-                            title="VIEW THE STORIES"
-                            color="black"
-                            space="detail"
-                        />
-                    }
-                    order="order"
-                />
+                {detail.map((item, index) => (
+                    <Detail
+                        key={index}
+                        desktop={item.picture.desktop}
+                        tablet={item.picture.tablet}
+                        mobile={item.picture.mobile}
+                        header={item.header}
+                        paragraph={item.paragraph}
+                        order={item.order}
+                    />
+                ))}
             </section>
 
             <section className={styles.section_pictures} aria-label="pictures">
-                <Picture
-                    picture={
-                        <picture>
-                            <source
-                                srcSet="/assets/stories/desktop/mountains.jpg"
-                                media={`(min-width:${desktop}px)`}
-                            />
-                            <img
-                                src="/assets/stories/mobile/mountains.jpg"
-                                alt=""
-                            />
-                        </picture>
-                    }
-                    header="The Mountains"
-                    author="by John Appleseed"
-                />
-                <Picture
-                    picture={
-                        <picture>
-                            <source
-                                srcSet="/assets/stories/desktop/cityscapes.jpg"
-                                media={`(min-width:${desktop}px)`}
-                            />
-                            <img
-                                src="/assets/stories/mobile/cityscapes.jpg"
-                                alt=""
-                            />
-                        </picture>
-                    }
-                    header="Sunset Cityscapes"
-                    author=" by Benjamin Cruz"
-                />
-                <Picture
-                    picture={
-                        <picture>
-                            <source
-                                srcSet="/assets/stories/desktop/18-days-voyage.jpg"
-                                media={`(min-width:${desktop}px)`}
-                            />
-                            <img
-                                src="/assets/stories/mobile/18-days-voyage.jpg"
-                                alt=""
-                            />
-                        </picture>
-                    }
-                    header="18 Days Voyage"
-                    author="by Alexei Borodin"
-                />
-                <Picture
-                    picture={
-                        <picture>
-                            <source
-                                srcSet="/assets/stories/desktop/architecturals.jpg"
-                                media={`(min-width:${desktop}px)`}
-                            />
-                            <img
-                                src="/assets/stories/mobile/architecturals.jpg"
-                                alt=""
-                            />
-                        </picture>
-                    }
-                    header="Architecturals"
-                    author="by Samantha Brooke"
-                />
+                {pictures.map((picture, index) => (
+                    <Picture
+                        key={index}
+                        desktop={picture.picture.desktop}
+                        mobile={picture.picture.mobile}
+                        header={picture.header}
+                        author={picture.author}
+                    />
+                ))}
             </section>
             <section className={styles.section_tools} aria-label="tools">
                 <div className={styles.tools_container}>
-                    <Tool
-                        icon={<Responsive />}
-                        header="100% Responsive"
-                        paragraph="No matter which the device you’re on, our site is fully
-                        responsive and stories look beautiful on any screen."
-                    />
-                    <Tool
-                        icon={<Unlimit />}
-                        header=" No Photo Upload Limit"
-                        paragraph="Our tool has no limits on uploads or bandwidth. Freely upload in bulk and 
-                    share all of your stories in one go."
-                    />
-                    <Tool
-                        icon={<Embed />}
-                        header="Available to Embed"
-                        paragraph=" Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos, 
-                Google Maps, and more."
-                    />
+                    {tool.map((instrument, index) => (
+                        <Tool
+                            key={index}
+                            icon={instrument.icon}
+                            header={instrument.header}
+                            paragraph={instrument.paragraph}
+                        />
+                    ))}
                 </div>
             </section>
             <Footer />
