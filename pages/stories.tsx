@@ -1,10 +1,9 @@
 import Head from "next/head";
 import styles from "../styles/Stories.module.scss";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import Button from "../components/Button";
-import Picture from "../components/Picture";
+import { Header, Button, Picture, Footer } from "components";
+
 import { pictures } from "../data/pictureStories";
+
 export default function Stories() {
     return (
         <div className={styles.main_container}>

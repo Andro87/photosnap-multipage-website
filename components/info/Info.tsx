@@ -8,7 +8,7 @@ interface Props {
     readonly business?: ReactNode;
 }
 
-const Info: React.FunctionComponent<Props> = props => {
+export const Info: React.FunctionComponent<Props> = props => {
     const { info, basic, pro, business } = props;
     return (
         <div className={styles.info_header}>
@@ -26,4 +26,3 @@ const Info: React.FunctionComponent<Props> = props => {
         </div>
     );
 };
-export default Info;

@@ -1,11 +1,11 @@
 import styles from "./Header.module.scss";
 import React from "react";
 import { useState } from "react";
-import Logo from "../svg/logo.svg";
-import Menu from "../svg/menu.svg";
-import Close from "../svg/close.svg";
+import Logo from "svg/logo.svg";
+import Menu from "svg/menu.svg";
+import Close from "svg/close.svg";
 import Link from "next/link";
-const Header: React.FunctionComponent = () => {
+export const Header: React.FunctionComponent = () => {
     const [open, setOpen] = useState(false);
     return (
         <header className={styles.header}>
@@ -51,4 +51,3 @@ const Header: React.FunctionComponent = () => {
         </header>
     );
 };
-export default Header;

@@ -1,4 +1,4 @@
-@import "../styles/variables.scss";
+@use "styles/helpers" as *;
 
 .price_box {
     background: hsla(0, 0%, 96%, 1);
@@ -10,11 +10,11 @@
     position: relative;
     width: 100%;
     max-width: 320px;
-    @media screen and (max-width: $smaller_device) {
+    @include breakpoint($smaller_device) {
         padding: 56px 5px 40px;
         max-width: initial;
     }
-    @media screen and (min-width: $tablet) {
+    @include breakpoint($medium) {
         padding: 40px;
         text-align: start;
         display: flex;
@@ -23,7 +23,7 @@
         position: relative;
         max-width: 690px;
     }
-    @media screen and (min-width: $desktop) {
+    @include breakpoint($large) {
         padding: 56px 0 40px;
         align-items: center;
         text-align: center;
@@ -35,7 +35,7 @@
     }
     p {
         opacity: 0.6;
-        @media screen and (min-width: $tablet) {
+        @include breakpoint($medium) {
             width: 270px;
         }
     }
@@ -43,7 +43,7 @@
 .dark_box {
     background-color: var(--PureBlack);
 
-    @media screen and (min-width: $desktop) {
+    @include breakpoint($large) {
         height: 110%;
         position: relative;
         top: -5%;
@@ -58,11 +58,11 @@
         top: 0;
         left: 0;
 
-        @media screen and (min-width: $tablet) {
+        @include breakpoint($medium) {
             height: 100%;
             width: 6px;
         }
-        @media screen and (min-width: $desktop) {
+        @include breakpoint($large) {
             height: 6px;
             width: 100%;
         }
@@ -75,22 +75,22 @@
 }
 .offer_wrap {
     margin-top: 40px;
-    @media screen and (min-width: $tablet) {
+    @include breakpoint($medium) {
         position: absolute;
         top: 40px;
         right: 40px;
         margin-top: 0;
     }
-    @media screen and (min-width: $desktop) {
+    @include breakpoint($large) {
         position: initial;
         margin-top: 40px;
     }
     p {
-        @media screen and (min-width: $tablet) {
+        @include breakpoint($medium) {
             width: fit-content;
             margin-left: auto;
         }
-        @media screen and (min-width: $desktop) {
+        @include breakpoint($large) {
             margin: auto;
         }
     }
@@ -101,7 +101,7 @@
     line-height: 3.2rem;
     font-weight: 700;
 
-    @media screen and (max-width: $smaller_device) {
+    @include breakpoint($smaller_device) {
         font-size: 2rem;
     }
 }
@@ -123,11 +123,11 @@
         background-color: var(--LightGrey);
         color: var(--PureBlack);
     }
-    @media screen and (min-width: $tablet) {
+    @include breakpoint($medium) {
         margin-top: 32px;
         max-width: 270px;
     }
-    @media screen and (min-width: $desktop) {
+    @include breakpoint($large) {
         margin-top: 40px;
     }
 }

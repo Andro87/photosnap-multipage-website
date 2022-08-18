@@ -44,7 +44,7 @@ Users should be able to:
 
 ### What I learned
 
-This challenge gave my the opportunity to test my skills layout and to practise with React.
+This challenge gave my the opportunity to test my layout skills and to practise with React.
 
 ## Author
 

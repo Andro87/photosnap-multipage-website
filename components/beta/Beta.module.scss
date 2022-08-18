@@ -1,21 +1,22 @@
-@import "../styles/variables.scss";
+@use "styles/helpers" as *;
+
 .section_invite {
     width: 100%;
 }
 .invite_info {
-    background: url("../public/assets/shared/mobile/bg-beta.jpg");
+    background: url("../../public/assets/shared/mobile/bg-beta.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     padding: 64px 33px;
 
-    @media screen and(min-width:$tablet) {
+    @include breakpoint($medium) {
         padding: 0;
-        background: url("../public/assets/shared/tablet/bg-beta.jpg");
+        background: url("../../public/assets/shared/tablet/bg-beta.jpg");
         background-repeat: no-repeat;
         background-size: cover;
     }
-    @media screen and(min-width:$desktop) {
-        background: url("../public/assets/shared/desktop/bg-beta.jpg");
+    @include breakpoint($large) {
+        background: url("../../public/assets/shared/desktop/bg-beta.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
@@ -25,14 +26,14 @@
 .invite_wrap {
     position: relative;
     width: 100%;
-    @media screen and (min-width: $tablet) {
+    @include breakpoint($medium) {
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 68px 40px;
         margin: auto;
     }
-    @media screen and (min-width: $desktop) {
+    @include breakpoint($large) {
         width: 77%;
         position: initial;
         padding-left: 0;
@@ -41,7 +42,7 @@
     h2 {
         color: var(--PureWhite);
         margin-bottom: 24px;
-        @media screen and (min-width: $tablet) {
+        @include breakpoint($medium) {
             width: 400px;
             margin-bottom: 0;
         }
@@ -56,7 +57,7 @@
         top: -68px;
         left: 0;
 
-        @media screen and (min-width: $tablet) {
+        @include breakpoint($medium) {
             height: 100%;
             width: 6px;
             top: 0;

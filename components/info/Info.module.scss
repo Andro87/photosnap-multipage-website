@@ -1,9 +1,9 @@
-@import "../styles/variables.scss";
+@use "styles/helpers" as *;
 
 .info_header {
     margin-bottom: 24px;
     padding-right: 46px;
-    @media screen and (min-width: $tablet) {
+    @include breakpoint($medium) {
         display: grid;
         grid-template-columns: 40% 60%;
         align-items: center;
@@ -20,7 +20,7 @@
     display: flex;
     justify-content: space-between;
     margin-top: 16px;
-    @media screen and (min-width: $tablet) {
+    @include breakpoint($medium) {
         display: none;
     }
 }

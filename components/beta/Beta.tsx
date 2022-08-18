@@ -1,9 +1,9 @@
 import styles from "./Beta.module.scss";
 import React from "react";
 
-import Button from "../components/Button";
+import { Button } from "components";
 
-const Beta: React.FunctionComponent = () => {
+export const Beta: React.FunctionComponent = () => {
     return (
         <section className={styles.section_invite} aria-label="get an invite">
             <div className={styles.invite_info}>
@@ -21,4 +21,3 @@ const Beta: React.FunctionComponent = () => {
         </section>
     );
 };
-export default Beta;

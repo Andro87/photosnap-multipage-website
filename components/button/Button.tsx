@@ -9,7 +9,7 @@ interface Props {
     readonly position?: string;
 }
 
-const Button: React.FunctionComponent<Props> = props => {
+export const Button: React.FunctionComponent<Props> = props => {
     const { title, color, space, arrow, position } = props;
     return (
         <div className={`${styles.btn_wrap} ${styles[position]} `}>
@@ -33,4 +33,3 @@ const Button: React.FunctionComponent<Props> = props => {
         </div>
     );
 };
-export default Button;

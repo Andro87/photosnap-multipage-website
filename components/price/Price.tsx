@@ -12,7 +12,7 @@ interface Props {
     readonly light?: string;
 }
 
-const Price: React.FunctionComponent<Props> = props => {
+export const Price: React.FunctionComponent<Props> = props => {
     const { header, paragraph, price, period, dark, btn_white } = props;
     return (
         <div className={`${styles.price_box} ${styles[dark]}`}>
@@ -33,4 +33,3 @@ const Price: React.FunctionComponent<Props> = props => {
         </div>
     );
 };
-export default Price;

@@ -1,4 +1,4 @@
-@import "./variables";
+@use "styles/helpers" as *;
 
 .main_container {
     width: 100%;
@@ -7,17 +7,17 @@
 .main {
     width: 100%;
 
-    @media screen and(min-width:$tablet) {
+    @include breakpoint($medium) {
         display: flex;
         flex-direction: row-reverse;
     }
 }
 .main_img {
     display: flex;
-    @media screen and(min-width:$tablet) {
+    @include breakpoint($medium) {
         width: 35%;
     }
-    @media screen and(min-width:$tablet) {
+    @include breakpoint($large) {
         width: 58%;
     }
     img {
@@ -28,13 +28,13 @@
     background-color: var(--PureBlack);
     padding: 72px 24px 72px 33px;
 
-    @media screen and(min-width:$tablet) {
+    @include breakpoint($medium) {
         display: flex;
         padding: 173px 0;
         align-items: center;
         width: 65%;
     }
-    @media screen and(min-width:$desktop) {
+    @include breakpoint($large) {
         width: 42%;
     }
 }
@@ -42,11 +42,11 @@
 .info_wrap {
     position: relative;
     width: 100%;
-    @media screen and (min-width: $tablet) {
+    @include breakpoint($medium) {
         padding-left: 54px;
         width: 387px;
     }
-    @media screen and (min-width: $desktop) {
+    @include breakpoint($large) {
         padding-left: 112px;
         width: 500px;
     }
@@ -58,7 +58,7 @@
         margin-bottom: 23px;
         color: var(--PureWhite);
         opacity: 0.6;
-        @media screen and (min-width: $tablet) {
+        @include breakpoint($medium) {
             margin-top: 21px;
             margin-bottom: 48px;
         }
@@ -73,7 +73,7 @@
         top: -74px; /**/
         left: 0;
 
-        @media screen and (min-width: $tablet) {
+        @include breakpoint($medium) {
             height: 100%;
             width: 6px;
             top: 0;
@@ -88,10 +88,10 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    @media screen and (min-width: $tablet) {
+    @include breakpoint($medium) {
         grid-template-columns: repeat(2, 1fr);
     }
-    @media screen and (min-width: $desktop) {
+    @include breakpoint($large) {
         grid-template-columns: repeat(4, 1fr);
     }
 }
@@ -100,7 +100,7 @@
     padding: 80px 33px;
     display: flex;
     justify-content: center;
-    @media screen and (min-width: $tablet) {
+    @include breakpoint($medium) {
         padding: 120px 0;
     }
 }
@@ -109,10 +109,10 @@
     grid-template-columns: repeat(1, 1fr);
     row-gap: 56px;
     justify-items: center;
-    @media screen and (min-width: $tablet) {
+    @include breakpoint($medium) {
         row-gap: 80px;
     }
-    @media screen and (min-width: $desktop) {
+    @include breakpoint($large) {
         width: 77%;
         grid-template-columns: repeat(3, 1fr);
         row-gap: 0;

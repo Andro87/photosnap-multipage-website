@@ -1,14 +1,14 @@
 import styles from "./Footer.module.scss";
 import React from "react";
 import Link from "next/link";
-import Logo from "../svg/logo.svg";
-import Facebook from "../svg/facebook.svg";
-import Youtube from "../svg/youtube.svg";
-import Twitter from "../svg/twitter.svg";
-import Pinterest from "../svg/pinterest.svg";
-import Instagram from "../svg/instagram.svg";
-import Button from "../components/Button";
-const Footer: React.FunctionComponent = () => {
+import Logo from "svg/logo.svg";
+import Facebook from "svg/facebook.svg";
+import Youtube from "svg/youtube.svg";
+import Twitter from "svg/twitter.svg";
+import Pinterest from "svg/pinterest.svg";
+import Instagram from "svg/instagram.svg";
+import { Button } from "components";
+export const Footer: React.FunctionComponent = () => {
     return (
         <footer className={styles.footer}>
             <div className={styles.footer_wrap}>
@@ -50,4 +50,3 @@ const Footer: React.FunctionComponent = () => {
         </footer>
     );
 };
-export default Footer;

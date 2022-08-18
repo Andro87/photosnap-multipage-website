@@ -1,4 +1,5 @@
-@import "../styles/variables.scss";
+@use "styles/helpers" as *;
+
 .btn_wrap {
     display: flex;
 
@@ -8,7 +9,7 @@
 }
 .footer_position {
     justify-content: center;
-    @media screen and (min-width: $tablet) {
+    @include breakpoint($medium) {
         justify-content: flex-end;
     }
 }
@@ -48,7 +49,7 @@
 }
 .footer {
     margin-left: 22px;
-    @media screen and (min-width: $tablet) {
+    @include breakpoint($medium) {
         margin-left: 16px;
     }
 }

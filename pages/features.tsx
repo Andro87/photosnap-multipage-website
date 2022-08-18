@@ -1,13 +1,10 @@
 import Head from "next/head";
 import styles from "../styles/Features.module.scss";
 
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import Tool from "../components/Tool";
-import Beta from "../components/Beta";
-
+import { Header, Tool, Beta, Footer } from "components";
 import { tool } from "../data/toolsFeatures";
-export default function Home() {
+
+export default function Features() {
     const desktop = 1180;
     const tablet = 720;
 

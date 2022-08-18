@@ -1,6 +1,6 @@
 import styles from "./Detail.module.scss";
-import React, { ReactNode } from "react";
-import Button from "./Button";
+import React from "react";
+import { Button } from "components";
 interface Props {
     readonly desktop: string;
     readonly tablet: string;
@@ -11,7 +11,7 @@ interface Props {
     readonly order?: string;
 }
 
-const Detail: React.FunctionComponent<Props> = props => {
+export const Detail: React.FunctionComponent<Props> = props => {
     const { desktop, tablet, mobile, header, paragraph, order } = props;
     const desktopSize = 1180;
     const tabletSize = 720;
@@ -45,4 +45,3 @@ const Detail: React.FunctionComponent<Props> = props => {
         </div>
     );
 };
-export default Detail;

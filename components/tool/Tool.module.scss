@@ -1,4 +1,5 @@
-@import "../styles/variables.scss";
+@use "styles/helpers" as *;
+
 .tool {
     display: flex;
     flex-direction: column;
@@ -6,13 +7,13 @@
     text-align: center;
     margin-top: auto;
     max-width: 460px;
-    @media screen and (min-width: $tablet) {
+    @include breakpoint($medium) {
         max-width: 460px;
     }
     h3 {
         margin-top: 66px;
         margin-bottom: 16px;
-        @media screen and (min-width: $tablet) {
+        @include breakpoint($medium) {
             margin-top: 46px; /*rivedere*/
         }
     }

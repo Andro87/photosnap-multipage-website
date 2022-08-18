@@ -1,13 +1,9 @@
 import Head from "next/head";
 import styles from "../styles/Pricing.module.scss";
-import Header from "../components/Header";
-import Beta from "../components/Beta";
-import Footer from "../components/Footer";
-
-import Price from "../components/Price";
-import Info from "../components/Info";
+import { Header, Beta, Price, Info, Footer } from "components";
 import Check from "../svg/check.svg";
 import { useState } from "react";
+
 export default function Pricing() {
     const [check, setCheck] = useState(false);
     const desktop = 1180;

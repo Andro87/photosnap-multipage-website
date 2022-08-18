@@ -6,7 +6,7 @@ interface Props {
     readonly paragraph: string;
 }
 
-const Tool: React.FunctionComponent<Props> = props => {
+export const Tool: React.FunctionComponent<Props> = props => {
     const { icon, header, paragraph } = props;
     return (
         <div className={styles.tool}>
@@ -16,4 +16,3 @@ const Tool: React.FunctionComponent<Props> = props => {
         </div>
     );
 };
-export default Tool;

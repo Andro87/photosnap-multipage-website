@@ -1,17 +1,17 @@
-@import "./variables";
+@use "styles/helpers" as *;
 
 .main_container {
     width: 100%;
 }
 
 .main {
-    @media screen and(min-width:$tablet) {
+    @include breakpoint($medium) {
         display: flex;
         background-image: url("../public/assets/stories/tablet/moon-of-appalacia.jpg");
         background-repeat: no-repeat;
         background-size: cover;
     }
-    @media screen and(min-width:$desktop) {
+    @include breakpoint($large) {
         background-image: url("../public/assets/stories/desktop/moon-of-appalacia.jpg");
         background-repeat: no-repeat;
         background-size: cover;
@@ -24,7 +24,7 @@
     img {
         width: 100%;
     }
-    @media screen and(min-width:$tablet) {
+    @include breakpoint($medium) {
         display: none;
     }
 }
@@ -33,14 +33,14 @@
     padding: 48px 28px;
     background-color: var(--PureBlack);
     color: var(--PureWhite);
-    @media screen and(min-width:$tablet) {
+    @include breakpoint($medium) {
         padding: 0;
         width: 387px;
         margin: 122px 39px;
         background-color: transparent;
     }
 
-    @media screen and(min-width:$desktop) {
+    @include breakpoint($large) {
         margin: 122px 112px;
     }
 
@@ -48,7 +48,7 @@
         margin-top: 16px;
         margin-bottom: 16px;
 
-        @media screen and(min-width:$tablet) {
+        @include breakpoint($medium) {
             margin-top: 24px;
         }
     }
@@ -71,10 +71,10 @@
 .section_pictures {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    @media screen and(min-width:$tablet) {
+    @include breakpoint($medium) {
         grid-template-columns: repeat(2, 1fr);
     }
-    @media screen and(min-width:$desktop) {
+    @include breakpoint($large) {
         grid-template-columns: repeat(4, 1fr);
     }
 }

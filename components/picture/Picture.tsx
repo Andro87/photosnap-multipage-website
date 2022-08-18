@@ -1,6 +1,6 @@
 import styles from "./Picture.module.scss";
-import React, { ReactNode } from "react";
-import Button from "../components/Button";
+import React from "react";
+import { Button } from "components";
 interface Props {
     readonly desktop: string;
     readonly mobile: string;
@@ -9,7 +9,7 @@ interface Props {
     readonly author: string;
 }
 
-const Picture: React.FunctionComponent<Props> = props => {
+export const Picture: React.FunctionComponent<Props> = props => {
     const { desktop, mobile, date, header, author } = props;
     const desktopSize = 1180;
     return (
@@ -38,4 +38,3 @@ const Picture: React.FunctionComponent<Props> = props => {
         </div>
     );
 };
-export default Picture;

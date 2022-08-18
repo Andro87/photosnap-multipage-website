@@ -1,16 +1,12 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.scss";
 
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import Button from "../components/Button";
-import Detail from "../components/Detail";
-import Picture from "../components/Picture";
-import Tool from "../components/Tool";
+import { Header, Button, Detail, Picture, Tool, Footer } from "components";
 
 import { detail } from "../data/detail";
 import { pictures } from "../data/pictureIndex";
 import { tool } from "../data/toolsIndex";
+
 export default function Home() {
     const desktop = 1180;
     const tablet = 720;
